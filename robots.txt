@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://calculaya.rpwt2kmyz2.workers.dev/sitemap.xml

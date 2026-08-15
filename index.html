@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>CalculaYa — Calculadora de beneficio y comisiones</title>
+  <meta name="description" content="Calcula gratis tu beneficio real después de comisiones, producto, envío y otros gastos.">
+  <link rel="canonical" href="https://calculaya.rpwt2kmyz2.workers.dev/">
+  <meta property="og:title" content="CalculaYa — Calculadora de beneficio y comisiones">
+  <meta property="og:description" content="Calcula gratis cuánto ganas realmente con cada venta.">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="/" aria-label="CalculaYa inicio"><span class="brand-mark">C</span>CalculaYa</a>
+  <nav><a href="#calculadora">Calculadora</a><a href="#como-funciona">Cómo funciona</a><a href="#faq">Preguntas frecuentes</a></nav>
+</header>
+
+<main>
+  <section class="hero">
+    <div>
+      <p class="eyebrow">100% gratis · sin registro</p>
+      <h1>Calcula cuánto ganas <span>realmente</span> con cada venta.</h1>
+      <p class="lead">Introduce el precio, tus costes y la comisión de la plataforma. Obtén tu beneficio y margen en segundos.</p>
+      <a class="hero-btn" href="#calculadora">Calcular mi beneficio →</a>
+    </div>
+    <div class="hero-card">
+      <div class="mini-label">Ejemplo</div>
+      <div class="mini-row"><span>Venta</span><strong>50,00 €</strong></div>
+      <div class="mini-row"><span>Costes</span><strong>27,50 €</strong></div>
+      <div class="mini-result"><small>Beneficio</small><b>22,50 €</b></div>
+    </div>
+  </section>
+
+  <section id="calculadora" class="tool-section">
+    <div class="section-heading">
+      <p class="eyebrow">Calculadora</p>
+      <h2>Beneficio y comisiones</h2>
+      <p>Rellena los campos y pulsa calcular.</p>
+    </div>
+    <div class="calculator">
+      <form id="profitForm">
+        <label>Precio de venta (€)<input id="salePrice" type="number" min="0" step="0.01" value="50" required></label>
+        <label>Coste del producto (€)<input id="productCost" type="number" min="0" step="0.01" value="15" required></label>
+        <label>Coste de envío (€)<input id="shipping" type="number" min="0" step="0.01" value="5" required></label>
+        <label>Comisión de la plataforma (%)<input id="feePercent" type="number" min="0" max="100" step="0.01" value="10" required></label>
+        <label>Otros gastos (€)<input id="otherCosts" type="number" min="0" step="0.01" value="0" required></label>
+        <button type="submit">Calcular beneficio</button>
+      </form>
+      <aside class="results" aria-live="polite">
+        <p class="result-label">Beneficio neto</p>
+        <div id="profit" class="profit">22,50 €</div>
+        <div class="result-grid">
+          <div><span>Margen</span><strong id="margin">45,00 %</strong></div>
+          <div><span>Comisión</span><strong id="fee">5,00 €</strong></div>
+          <div><span>Costes totales</span><strong id="totalCosts">27,50 €</strong></div>
+          <div><span>Beneficio sobre venta</span><strong id="profitPercent">45,00 %</strong></div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section id="como-funciona" class="content-section">
+    <div class="section-heading"><p class="eyebrow">Cómo funciona</p><h2>Una cuenta sencilla y transparente</h2></div>
+    <div class="steps">
+      <article><span>01</span><h3>Precio de venta</h3><p>Introduce cuánto paga el cliente por tu producto.</p></article>
+      <article><span>02</span><h3>Costes</h3><p>Añade producto, envío y cualquier gasto adicional.</p></article>
+      <article><span>03</span><h3>Comisión</h3><p>Indica el porcentaje que cobra tu plataforma.</p></article>
+      <article><span>04</span><h3>Resultado</h3><p>Calcula el beneficio y el margen de tu venta.</p></article>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="info-card">
+      <h2>¿Cómo calculamos el beneficio?</h2>
+      <p>La comisión se calcula aplicando el porcentaje indicado al precio de venta. Después se restan la comisión, el coste del producto, el envío y otros gastos al precio de venta.</p>
+      <div class="formula">Beneficio = Precio de venta − (Producto + Envío + Comisión + Otros gastos)</div>
+      <p>El resultado es una estimación y puede no incluir impuestos, devoluciones, descuentos, retenciones u otras tarifas específicas de una plataforma.</p>
+    </div>
+  </section>
+
+  <section id="faq" class="content-section faq">
+    <div class="section-heading"><p class="eyebrow">FAQ</p><h2>Preguntas frecuentes</h2></div>
+    <details><summary>¿La calculadora es gratuita?</summary><p>Sí. Puedes utilizarla sin crear una cuenta.</p></details>
+    <details><summary>¿Qué comisión debo introducir?</summary><p>Introduce el porcentaje que cobre la plataforma que utilizas. Si existen varias comisiones, puedes sumarlas y usar el total aproximado.</p></details>
+    <details><summary>¿El resultado incluye impuestos?</summary><p>No. Esta primera versión calcula el beneficio antes de impuestos y no sustituye una liquidación fiscal.</p></details>
+    <details><summary>¿Puedo usarla para Etsy, Amazon o Vinted?</summary><p>Sí como estimación, siempre que introduzcas correctamente las tarifas aplicables. Las comisiones reales pueden variar según el país, producto y tipo de cuenta.</p></details>
+  </section>
+</main>
+
+<footer>
+  <div><strong>CalculaYa</strong><p>Herramientas online sencillas para tomar mejores decisiones.</p></div>
+  <div class="footer-links"><a href="privacidad.html">Privacidad</a><a href="terminos.html">Términos</a><a href="contacto.html">Contacto</a></div>
+  <p class="copyright">© 2026 CalculaYa</p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
